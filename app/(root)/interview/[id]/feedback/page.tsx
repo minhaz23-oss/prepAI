@@ -23,3 +23,14 @@
 // }
 
 // export default page
+
+
+const page = () => {
+  return (
+    <div>
+      <h1>this is the feedback page</h1>
+    </div>
+  )
+}
+
+export default page
