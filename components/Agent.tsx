@@ -91,7 +91,7 @@ const Agent = ({ userName,type,userId,interviewId,questions }: AgentProps) => {
        if(type === 'generate'){
         router.push('/')
        }else {
-        //  handleGenerateFeedback(messages)
+         handleGenerateFeedback(messages)
         router.push(`/interview/${interviewId}`)
        }
      }
