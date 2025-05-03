@@ -103,17 +103,17 @@ const Agent = ({ userName,type,userId,interviewId,questions }: AgentProps) => {
         }
       })
     }
-    // else {
-    //   let fomattedQuestions = '';
-    //   if(questions){
-    //     fomattedQuestions = questions.map((question) => `- ${question}`).join('\n')
-    //   }
-    //   await vapi.start(interviewer,{
-    //     variableValues: {
-    //       questions: fomattedQuestions,
-    //     }
-    //   })
-    // }
+    else {
+      let fomattedQuestions = '';
+      if(questions){
+        fomattedQuestions = questions.map((question) => `- ${question}`).join('\n')
+      }
+      await vapi.start(interviewer,{
+        variableValues: {
+          questions: fomattedQuestions,
+        }
+      })
+    }
   }
   const handleDisconnect = async () => {
     setCallStatus(CallStatus.FINISHED)
